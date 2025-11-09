@@ -48,7 +48,7 @@ Includes multiple brush tools, zooming, undo/redo, and a modern UI.
 ---
 
 ## Commands to run
- - npm install
+ - npm install ((Automatically installs: express, socket.io)
  - npm install express socket.io
  - npm start
  - Server running at http://localhost:3000
@@ -56,8 +56,7 @@ Includes multiple brush tools, zooming, undo/redo, and a modern UI.
 ---
 
 DEMO OF PROJECT
-
-<img width="1470" height="956" alt="Screenshot 2025-11-09 at 11 12 22 AM" src="https://github.com/user-attachments/assets/ec7719ee-9d2b-4f97-999e-213dde5a7d4c" />
+<img width="1419" height="853" alt="Screenshot 2025-11-09 at 11 15 20 AM" src="https://github.com/user-attachments/assets/edc0f8b3-1449-4d2e-b993-cd88549bd81c" />
 
 
 
