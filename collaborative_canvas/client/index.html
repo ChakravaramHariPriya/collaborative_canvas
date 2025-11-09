@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Collaborative Art Board</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <h1>🎨 Collaborative Art Board</h1>
+
+  <!-- main area: canvas + sidebar (equal height) -->
+  <div class="stage">
+    <div class="canvas-wrap">
+      <canvas id="canvas"></canvas>
+    </div>
+
+    <aside class="sidebar">
+      <div class="panel">
+        <label>Color</label>
+        <input id="colorPicker" type="color" value="#000000" />
+
+        <label>Brush Size</label>
+        <input id="brushSize" type="range" min="1" max="50" value="5" />
+
+        <label>Brush Type</label>
+        <select id="brushType">
+          <option value="normal">Normal</option>
+          <option value="calligraphy">Calligraphy</option>
+          <option value="spray">Spray</option>
+          <option value="highlighter">Highlighter</option>
+          <option value="eraser">Eraser</option>
+        </select>
+
+        <div class="buttons">
+          <button id="undoBtn"><i class="fa fa-rotate-left"></i> Undo</button>
+          <button id="redoBtn"><i class="fa fa-rotate-right"></i> Redo</button>
+        </div>
+
+        <div class="status">
+          <small id="statusText">Status: disconnected</small>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- socket.io client served by server -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
